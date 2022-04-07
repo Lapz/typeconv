@@ -1,23 +1,28 @@
 {
-  "name": "typeconv",
-  "version": "0.0.0-development",
+  "name": "@lapz/typeconv",
+  "version": "1.7.1",
   "description": "Convert between JSON Schema, TypeScript, GraphQL and Open API",
-  "author": "Gustaf Räntilä",
+  "author": "Lenard Pratt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/grantila/typeconv/issues"
+    "url": "https://github.com/lapz/typeconv/issues"
   },
-  "homepage": "https://github.com/grantila/typeconv#readme",
+  "homepage": "https://github.com/lapz/typeconv#readme",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "directories": {},
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "engines": {
     "node": ">=12"
   },
   "files": [
     "dist"
   ],
-  "bin": "dist/bin/typeconv.js",
+  "bin": {
+    "typeconv": "dist/bin/typeconv.js"
+  },
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.prod.json",
     "test": "CI=1 jest --coverage",
@@ -25,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/grantila/typeconv"
+    "url": "git+https://github.com/lapz/typeconv.git"
   },
   "keywords": [
     "convert",
@@ -57,7 +62,7 @@
     "core-types-graphql": "^1.4.0",
     "core-types-json-schema": "^1.6.2",
     "core-types-suretype": "^1.4.1",
-    "core-types-ts": "^1.5.0",
+    "@lapz/core-types-ts": "^1.5.1",
     "globby": "^11.0.3",
     "js-yaml": "^4.1.0",
     "oppa": "^0.4.0",
